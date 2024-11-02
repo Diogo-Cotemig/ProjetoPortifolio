@@ -1,0 +1,322 @@
+body{
+    background-color: rgb(177, 33, 33); ;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+.Barra{
+    display: flex;
+    background-color: #ad5050;
+    height: 8%;
+    border-radius: 10px;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  
+  .dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: #FFFF3E;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #c5981b;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(134, 10, 10);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgb(134, 10, 10);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+ 
+  .slider.round {
+    border-radius: 50px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+ #line.Dark{
+     background-color: #FFFF3E;
+}
+
+
+
+.div1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #892A2A;
+    border-radius: 10px;
+    width: 100px;
+}
+.centro{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+}
+.colo{
+    color: #ffffff;
+    transition: 0.5s;
+    margin-left: 5px 
+}
+.colo:hover{
+    color: black;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.colo:last-child{
+    margin-left: 80%;
+}
+
+#Menu{
+    background-color: hsla(47, 100%, 56%, 0);
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    font-family: "Roboto Slab", serif;;
+}
+
+#logo{
+    padding-left: 10px;
+    align-content: center;
+    height: 100px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+}
+
+.Brilha-Brilha{
+    border-radius: 15px;
+    width: 140px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: rgb(255, 230, 0);
+    font-size: xx-large;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    left: 110px;
+    border-radius: 10px;
+}
+.Brilha-Brilha:before {
+    content: '';
+    background: linear-gradient(30deg, #691f0c , #ac6125, rgb(54, 44, 29));
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.Brilha-Brilha:active {
+    color: #000
+}
+
+.Brilha-Brilha:active:after {
+    background: transparent;
+}
+
+.Brilha-Brilha:hover:before {
+    opacity: 1;
+}
+
+.Brilha-Brilha:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    font-family: "Italiana", sans-serif;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+#logo p{
+    font-size: 20px;   
+}
+#id2{
+    padding-top: 120px;
+}
+#section2{
+    background-color: rgb(134, 10, 10);
+    height: 85vh;
+    border-radius: 50px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 40px 30px 100px 100px 20px 40px 30px 70px 100px;
+    padding: 50px;
+}
+#img1{
+    grid-column: 1;
+    grid-row: 1/5;
+    background-image: url(colegio-santa-maria-minas-unidade-nova-suica_2_109960.webp);
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 30px;
+}
+#img2{
+    grid-column: 1;
+    grid-row: 5/10;
+    background-image: url(tumblr_324771308e620b18243f0defccdfb26f_e96cee53_500.gif);
+    margin-top: 20px;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 30px;
+}
+.Fonte{
+    margin: 0;
+    font-size: 30px;
+    color: #ffffff;
+    font-family: cursive;
+    margin-left: 10px;
+}
+#Uni{
+    grid-column: 2;
+    grid-row: 2;
+}
+.Unidad{
+    margin-top: 5px;
+    margin-left: 10px;
+    color: #ffffff;
+    font-family:'Courier New', Courier, monospace;
+}
+#fon{
+    grid-column: 2;
+    grid-row: 1;
+}
+.Caracter{
+    font-family: cursive;
+    color: #ffffff;
+    margin-left: 10px;
+    text-align: justify;
+}
+#Car{
+    grid-row: 3;
+}
+.radium{
+    grid-column: 2;
+    margin-left: 10px;
+    grid-row: 4;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+#Car2{
+    margin: 0;
+    grid-row: 4;
+    grid-column: 2;
+    padding-left: 40px;
+}
+#Car3{
+    grid-row: 4;
+    margin: 0;
+    grid-column: 2;
+    padding-left: 10px;
+    align-content: end;
+}
+#fon2{
+    grid-row: 5;
+    margin-top: 10px;
+    align-content: center;
+}
+#Uni2{
+    grid-row: 7;
+    margin: 0;
+    margin-left: 10px;
+}
+#Car4{
+    grid-row: 8;
+}
+.radium2{
+    grid-column: 2;
+    margin-left: 10px;
+    grid-row: 9;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+#Car5{
+    margin: 0;
+    grid-row: 9;
+    grid-column: 2;
+    padding-left: 40px;
+}
+#Car6{
+    grid-row: 9;
+    margin: 0;
+    grid-column: 2;
+    padding-left: 10px;
+    align-content: end;
+}

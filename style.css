@@ -1,0 +1,582 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Inicio do Dark Mode*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  #line2{
+    background-color: white;
+    height: 2px;
+    width: 100%;
+  }
+  body {
+    background-color: #FFFF3E;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: #FFFF3E;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #c5981b;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(134, 10, 10);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgb(134, 10, 10);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 50px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+ #line.Dark{
+     background-color: #FFFF3E;
+}
+
+
+
+/*Fim do Dark Mode*/
+
+/*Inicio do modelo de celular*/
+@media(max-width: 400px){
+    #ImagemComp{
+            width: 150%;
+
+    }
+    #Welcome{
+        width: 100%;
+    }
+    #lacuna{
+        margin: 0;
+        height: 50vh;
+        width: 150%;
+        font-size: 10px;
+        display: flex;
+        background-color: #000000;
+        align-content: center;
+        justify-content: space-evenly;
+        
+    }
+   #paragr1{
+    width: 100%;
+    white-space: nowrap;
+   } 
+   #disponivel{
+    font-size: 8px;
+   }
+}
+
+/*fim do modelo celular*/
+#Menu{
+    background-color: hsla(47, 100%, 56%, 0);
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    font-family: "Roboto Slab", serif;;
+}
+
+#logo{
+    padding-left: 10px;
+    align-content: center;
+    height: 100px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+}
+
+
+.Brilha-Brilha{
+    border-radius: 15px;
+    width: 140px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: #032026;
+    font-size: xx-large;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    left: 110px;
+    border-radius: 10px;
+}
+.Brilha-Brilha:before {
+    content: '';
+    background: linear-gradient(30deg, #c23411 , #e9c524, rgb(196, 142, 61));
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.Brilha-Brilha:active {
+    color: #000
+}
+
+.Brilha-Brilha:active:after {
+    background: transparent;
+}
+
+.Brilha-Brilha:hover:before {
+    opacity: 1;
+}
+
+.Brilha-Brilha:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    font-family: "Italiana", sans-serif;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+#logo p{
+    font-size: 20px;   
+   }
+#lista li:hover{
+    font-size: 21px;
+    color: #ffd700;   
+}
+#lista{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+#lista:hover{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+#lista li{
+    color: rgb(160, 18, 18);
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+a {
+    color: black; 
+    text-decoration: inherit;
+  }
+
+#ImagemComp{
+    background-image: url(superbook-word.webp);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Welcome{position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+#sobremim{   
+    text-shadow: 
+    -2px -2px 0 rgba(0, 0, 0, 0.7),  
+     2px -2px 0 rgba(255, 255, 255, 0.7),
+    -2px  2px 0 rgba(0, 0, 0, 0.7),
+     2px  2px 0 rgba(255, 255, 255, 0.7);
+     transition: 0.5s;
+
+    }
+/*Maneira 1 de animar uma imagem que aparece e some*/
+#Welcome a h1 { position: relative;
+    z-index: 3;}
+    #sobremim:hover{   
+        font-size: 110px;
+    }
+    #Welcome h1{
+        font-size: 100px;
+    }
+    #Welcome img { position: absolute;
+    left: 50%;
+    width: 100%;
+    top: 50%;
+    z-index: -1;
+    transition: 0.5s;
+    transform: translate(-50%,-50%);
+    }
+
+    
+/*2° PAGINA*/
+
+#topic{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+  align-items: center;
+}
+
+.tp{
+    margin: 5%;
+    height: 700px;
+    background-color: white;
+    width: 600px;   
+    display: grid;
+    grid-template-rows: repeat(1fr, 3);
+    border: 5;
+    border: 5px solid;
+    border-radius: 5px;
+}
+.Conteudo{
+    display: grid;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(0deg, #892A2A , #FFFF3E);
+}
+
+svg{
+    margin-top: 20px;
+    height: 100px;
+    transition: 0.5s;
+
+}
+.Conteudo:hover svg{
+    fill: rgb(255, 255, 255);
+
+}
+.Conteudo:hover{
+    color: rgb(255, 255, 255);
+    transition: 0.5S;
+
+}
+h2{
+ margin-top: 10%;
+}
+#Comp{
+    height: 100vh;
+    width: 100%;
+    background-image: url(Sem\ títu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(80%); 
+    transition: 0.5s;
+}
+#Comp:hover{
+    filter: grayscale(0%); 
+}
+#Cp{
+    margin: 0;
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    height: 50px;
+    line-height: 50px;
+    width: 20%;
+    font-size: 20px;
+}
+#Cp:hover{
+    font-size: 30px;
+    color: #892A2A;
+    background-color: #ffff3e56;
+    height: 50px;
+    line-height: 50px;
+    width: 20%;
+
+}
+#BackColo{
+    height: 30px;
+    width: auto;
+    background-color: #FFFF3E;
+
+}
+
+#SaibaMais{
+    height: 100vh;
+    width: 100%;
+}
+#pr{
+    font-size: 30px;
+}
+#produtos{
+    height: 80vh;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: sticky;
+     left: 5%;
+}
+#line{
+    width: 280px;
+    background-color: black;
+    height: 2px;
+    border-radius: 20px;
+    border: 0;
+}
+#paragr1{
+    font-size: 30px;
+    text-align:justify;
+}
+#paragr2{
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+}
+#paragr2:hover{
+font-size: 25px;
+}
+#lacuna{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    background-color: #000000;
+    align-content: center;
+    justify-content: space-evenly;
+}
+#lista2{
+    color: white;
+}
+#lista2 li{
+    text-align: justify;
+    margin: 20px;
+}
+#disponivel h2{
+    color: white;
+}
+
+#sveje{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon{
+    margin-right: 3%;
+    width: 50px;
+    height: 50px;
+    fill: #ffffff;
+}
+.icon:hover{
+    fill: #892A2A;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    overflow: auto;
+}
+
+#myModal{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+}
+
+.modal-content {
+    background-color: #753939;
+    height: 100vh;
+}
+
+.close {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.5s;
+
+}
+.close:hover{
+    font-size: 25.5px;
+}
+.modal-content{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.Barra{
+    display: flex;
+    background-color: #ad5050;
+    height: 5%;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.div1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #892A2A;
+    height: 100%;
+    border-radius: 10px;
+    width: 100px;
+    position: relative;
+    margin-left: 5px ;
+    transition: 0.5s;
+}
+
+.centro{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ffffff;
+}
+.centro:hover{
+    color:#000000
+}
+.div2{
+    text-align: center;
+    background-color: #892A2A;
+    height: 100%;
+    border-radius: 10px;
+    width: 40px;
+    margin-left: 80%;
+}
+
+
+.flex{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 25% 15% 75% 15%; /* 2 linhas do meio maiores */
+    gap: 10px;
+    width: 100%;
+}
+#ima{
+   background-image: url(Imagem\ do\ WhatsApp\ de\ 2024-07-12\ à\(s\)\ 10.25.16_2c42e3e4.jpg);
+   height: 500px;
+   width: 400px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 50%;
+   border-radius: 20px;
+   border: 2px solid blueviolet;
+   
+}
+#ima{
+    grid-column: 2;
+    grid-row: 2/4;
+}
+.prazer{
+    font-size: 25px;
+
+}
+#grid2{
+    grid-column: 3;
+    grid-row: 2;
+}
+#text{
+    grid-column: 3;
+    grid-row: 3;
+}
+#text{
+    background-color: #6f84c9;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: justify;
+    padding: 10px;
+}
+
+/*Tentativa de modal - parte 1*/
+
+#myModal2{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+}
+.espace{
+    margin-top: 80%;
+}
